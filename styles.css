@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  background-image: url('Background\ img.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  min-width: 100vh;
+  opacity: 0.7;
+}
+
+.nav-links,
+.nav-right,
+.dropdown-content,
+.sub-menu {
+  list-style: none;
+}
+
+.navbar {
+  background-color: #1f3a5f;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  
+}
+
+
+.logo img {
+  height: 50px;   
+  width: auto;
+  margin-right: 40px;
+  
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.nav-right {
+  list-style: none;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+
+.nav-links > li,
+.nav-right > li {
+  position: relative;
+}
+
+.nav-links a,
+.nav-right a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 8px;
+  display: block;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-right a:hover {
+  background-color: #35597d;
+  border-radius: 4px;
+}
+
+
+.signup {
+  font-weight: bold;
+  border: 2px solid white;
+  padding: 8px 14px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.signup:hover {
+  background-color: white;
+  color: #1f3a5f;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #1f3a5f;
+  min-width: 200px;
+  top: 100%;
+  left: 0;
+  border-radius: 4px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.dropdown:hover > .dropdown-content {
+  display: block;
+}
+
+
+.dropdown-sub {
+  position: relative;
+}
+
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: #1f3a5f;
+  top: 0;
+  left: 100%;
+  min-width: 200px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+
+.dropdown-sub:hover > .sub-menu {
+  display: block;
+}
+
+
+.dropdown-content a,
+.sub-menu a {
+  padding: 10px 15px;
+  color: white;
+}
+
+.dropdown-content a:hover,
+.sub-menu a:hover {
+  background-color: #35597d;
+  border-radius: 4px;
+  cursor: pointer;
+}
