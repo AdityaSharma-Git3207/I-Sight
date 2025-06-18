@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HOME</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="LOGO1.png" alt="I Sight Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li class="dropdown">
+          <a href="#">Services</a>
+          <ul class="dropdown-content">
+            <li class="dropdown-sub">
+              <a href="#">For Patients</a>
+              <ul class="sub-menu">
+                <li><a href="#">Book Appointment</a></li>
+                <li><a href="#">Connect with Doctors</a></li>
+                <li><a href="#">Health Record and History</a></li>
+              </ul>
+            </li>
+            <li class="dropdown-sub">
+              <a href="#">For Doctors</a>
+              <ul class="sub-menu">
+                <li><a href="#">Doctor Dashboard</a></li>
+                <li><a href="#">Manage Appointments</a></li>
+                <li><a href="#">Patient Records</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">Marketplace</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Shop Eyewear (Glasses / Lenses)</a></li>
+            <li><a href="#">Eye Drops & Products</a></li>
+            <li><a href="#">Upload Prescription to Order</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#">NGOs</a>
+          <ul class="dropdown-content">
+            <li><a href="#">Find NGO</a></li>
+            <li><a href="#">Join as NGO</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Community</a></li>
+      </ul>
+      <ul class="nav-right">
+        <li><a href="#" class="signup">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Book Your Consultation</h2>
+    <p>Schedule an appointment with our expert eye care professionals</p>
+
+    <section>
+      <h3>Personal Information</h3>
+      <form id="personalInformation" action="#" autocomplete="off" method="get">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name*</label>
+            <input type="text" id="fname" placeholder="Enter Your First Name" required />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name*</label>
+            <input type="text" id="lname" placeholder="Enter Your Last Name" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email*</label>
+            <input type="email" id="email" placeholder="Enter Your Email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number*</label>
+            <input type="tel" id="phone" placeholder="Enter Your Phone Number" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="age">Age*</label>
+            <input type="number" id="age" placeholder="Enter Your Age" required />
+          </div>
+          <div class="form-group">
+            <label for="emergency">Emergency Contact</label>
+            <input type="tel" id="emergency" placeholder="Enter Emergency Contact" required />
+          </div>
+        </div>
+      </form>
+
+      <h3>Consultation Type</h3>
+      <form id="consultationType" action="#" autocomplete="off" method="get">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="consultationType">Consultation Type*</label>
+            <select id="consultationType" name="consultationType" required>
+              <option value="">Select Consultation Type</option>
+              <option value="onlineConsultation">Online Consultation</option>
+              <option value="inPersonConsultation">In-Person Consultation</option>
+            </select>
+          </div>
+        </div>
+      </form>
+
+      <h3>Preferred Date and Time</h3>
+      <form id="dateTime" action="#" autocomplete="off" method="get">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="date">Preferred Date*</label>
+            <input type="date" id="date" name="date" required />
+          </div>
+          <div class="form-group">
+            <label for="time">Preferred Time*</label>
+            <select id="time" name="time" required>
+              <option value="">Select Time</option>
+              <option value="09:00">09:00 AM</option>
+              <option value="10:00">10:00 AM</option>
+              <option value="11:00">11:00 AM</option>
+              <option value="12:00">12:00 PM</option>
+              <option value="13:00">01:00 PM</option>
+              <option value="14:00">02:00 PM</option>
+              <option value="15:00">03:00 PM</option>
+              <option value="16:00">04:00 PM</option>
+              <option value="17:00">05:00 PM</option>
+            </select>
+          </div>
+        </div>
+      </form>
+
+      <h3>Medical Information</h3>
+      <form id="medicalInformation" action="#" autocomplete="off" method="get">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="symptoms">Current Symptoms or Concerns*</label>
+            <textarea id="symptoms" name="symptoms" rows="4" required></textarea>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <button type="submit">Proceed</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
