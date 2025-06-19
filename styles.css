@@ -82,7 +82,7 @@ body {
 }
 
 
-.signup {
+#signup {
   font-weight: bold;
   border: 2px solid white;
   padding: 8px 14px;
@@ -90,12 +90,25 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.signup:hover {
+#signup:hover {
   background-color: white;
   color: #1f3a5f;
 }
 
+#login {
+  font-weight: bold;
+  border: 2px solid white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-left: 8%;
+  text-align: center;
+}
 
+#login:hover {
+  background-color: white;
+  color: #1f3a5f;
+}
 .dropdown-content {
   display: none;
   position: absolute;
@@ -423,4 +436,39 @@ button[type="reset"]:active {
   #date {
     margin-left: 0;
   }
+}
+
+#googleBtn {
+  border-radius:2.5vmin;
+  height: 3em;
+  width: 34.27em;
+  border: none;
+  margin-top: 0em;
+  background-color: white;
+  cursor: pointer;
+  margin-left: 2%;
+}
+
+#googleBtn:hover {
+  background-color: #a1a1a1;
+}
+
+#googleBtn:active {
+  background-color: #808080;
+}
+
+img {
+  border: none;
+  width:200px;
+  align-self: center;
+  margin-top: 0.20em;
+}
+
+#loginline {
+  color: whitesmoke;
+  margin-left: 17%;
+}
+
+#loginlink {
+  color: red;
 }
