@@ -424,3 +424,15 @@ button[type="reset"]:active {
     margin-left: 0;
   }
 }
+#google{
+  border-radius:3vmin;
+  height: 40px;
+  width: 80%;
+  border: none;
+  margin-top: 20px;
+  background-color: white;
+}
+img{
+  border: none;
+  width:200px;
+}
