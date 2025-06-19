@@ -82,7 +82,7 @@ body {
 }
 
 
-.signup {
+#signup {
   font-weight: bold;
   border: 2px solid white;
   padding: 8px 14px;
@@ -90,12 +90,25 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.signup:hover {
+#signup:hover {
   background-color: white;
   color: #1f3a5f;
 }
 
+#login {
+  font-weight: bold;
+  border: 2px solid white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-left: 8%;
+  text-align: center;
+}
 
+#login:hover {
+  background-color: white;
+  color: #1f3a5f;
+}
 .dropdown-content {
   display: none;
   position: absolute;
@@ -424,15 +437,87 @@ button[type="reset"]:active {
     margin-left: 0;
   }
 }
-#google{
-  border-radius:3vmin;
-  height: 40px;
-  width: 80%;
+
+#googleBtn {
+  border-radius:2.5vmin;
+  height: 3em;
+  width: 34.27em;
   border: none;
-  margin-top: 20px;
+  margin-top: 0em;
   background-color: white;
+  cursor: pointer;
+  margin-left: 2%;
 }
-img{
+img {
   border: none;
   width:200px;
+  align-self: center;
+  margin-top: 0.20em;
+}
+
+#loginline {
+  color: whitesmoke;
+  margin-left: 17%;
+}
+
+#loginlink {
+  color: red;
+}
+/*For Community Tab*/
+.community-subheading{
+text-align: center;
+color: white;
+font-size: 1.2rem;
+}
+.User-reviews{
+  color: white;
+}
+.comment-input{
+  width: 55rem;
+}
+#comment-btn{
+  background-color: #2262bc;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 1em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 0.75%;
+  width: 8em;
+  margin-left: 0%;
+}
+#comment-btn:hover {
+  background-color: #3773af;
+}
+
+#comment-btn:active {
+  background-color: #0c2f7d;
+}
+.user-info img {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;            
+  border: 3px solid #ffffff;      
+  box-shadow: 0 0 0 3px #1f3a5f;  
+}
+.user-info {
+  display: flex;
+  align-items: center;   
+  gap: 12px;             
+  margin-bottom: 1em;
+  margin-top: 0;
+}
+
+.username {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: white;           
+  margin: 0;             
+}
+.review-text{
+  display: flex;
+  margin-top: 6em;
+  margin-left: -5em;
 }
