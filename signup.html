@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <script>
+  function handleGoogleLogin() {
+    alert("You are now signed in with Google!");
+    setTimeout(function() {
+      window.location.href = "index.html";
+    }, 1500);
+  }
+</script>
   <nav class="navbar">
     <div class="logo">
   <img src="LOGO1.png" alt="I Sight Logo">
@@ -93,7 +101,7 @@
         </div>
         <div id="buttons">
           <button type="submit" id="submitBtn">Submit</button>
-          <button type="reset" id="resetBtn">Reset</button>
+        <button type="reset" id="resetBtn">Reset</button>
         </div>
         <br>
         <div>
