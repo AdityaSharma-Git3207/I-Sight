@@ -460,14 +460,6 @@ button[type="reset"]:active {
   margin-left: 2%;
 }
 
-#googleBtn:hover {
-  background-color: #a1a1a1;
-}
-
-#googleBtn:active {
-  background-color: #808080;
-}
-
 img {
   border: none;
   width:200px;
@@ -634,14 +626,7 @@ input[type="checkbox"] {
   background-color: white;
   cursor: pointer;
   margin-left: 8%;
-}
-
-#googleBtn2:hover {
-  background-color: #a1a1a1;
-}
-
-#googleBtn2:active {
-  background-color: #808080;
+  cursor: pointer;
 }
 
 #signupline {
