@@ -451,13 +451,21 @@ button[type="reset"]:active {
 /* For Sign Up Page */
 #googleBtn {
   border-radius:2.5vmin;
-  height: 3em;
+  height: 3.6em;
   width: 34.27em;
   border: none;
   margin-top: 0em;
   background-color: white;
   cursor: pointer;
   margin-left: 2%;
+}
+
+#googleBtn:hover {
+  background-color: rgb(162, 162, 162);
+}
+
+#googleBtn:active {
+  background-color: rgb(105, 105, 105);
 }
 
 img {
@@ -619,7 +627,7 @@ input[type="checkbox"] {
 
 #googleBtn2 {
   border-radius:2.5vmin;
-  height: 3em;
+  height: 3.7em;
   width: 34.27em;
   border: none;
   margin-top: 0em;
@@ -627,6 +635,14 @@ input[type="checkbox"] {
   cursor: pointer;
   margin-left: 8%;
   cursor: pointer;
+}
+
+#googleBtn2:hover {
+  background-color: rgb(162, 162, 162);
+}
+
+#googleBtn2:active {
+  background-color: rgb(105, 105, 105);
 }
 
 #signupline {
