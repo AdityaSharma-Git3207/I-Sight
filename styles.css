@@ -177,6 +177,7 @@ h2 {
   text-align: center;
   margin-top: 0.85em;
   font-size: 1.3em;
+  margin-bottom: 3em;
 }
 
 #consultationForm {
@@ -191,7 +192,6 @@ h2 {
   backdrop-filter: blur(5px);
   box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
   border: 1px solid rgba(120, 120, 120, 0.4);
-  margin-top: 3em;
   margin-bottom: 3em;
   opacity: 0.9;
 }
@@ -291,7 +291,6 @@ button[type="reset"]:active {
     backdrop-filter: blur(5px);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
     border: 1px solid rgba(120, 120, 120, 0.4);
-    margin-top: 3em;
     margin-bottom: 3em;
     opacity: 0.9;
 }
@@ -591,7 +590,6 @@ img {
     backdrop-filter: blur(5px);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
     border: 1px solid rgba(120, 120, 120, 0.4);
-    margin-top: 3em;
     margin-bottom: 3em;
     opacity: 0.9;
 }
@@ -686,4 +684,94 @@ input[type="checkbox"] {
 
 #signuplink {
   color: red;
+}
+
+.product-info {
+  background-color: #1f3a5f;
+  color: whitesmoke;
+  border-radius: 2em;
+  backdrop-filter: blur(5px);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+  border: 1px solid rgba(120, 120, 120, 0.4);
+  opacity: 0.9;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 2em;
+  display: block;
+}
+.product-info img{
+  border-radius: 1em;
+  margin-left: 5%;
+  height: 10em;
+  width: 10em;
+  margin-top: 1em;
+  margin-bottom: 0em;
+}
+
+.product-name {
+  margin-left: 19%;
+  margin-top: -14%;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.product-price {
+  margin-left: 20%;
+  margin-bottom: 0%;
+  font-size: 1.25em;
+  color: whitesmoke;
+}
+.buy, .cart{
+  background-color:#2262bc ;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 1em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 3%;
+  width: 14em;
+  margin-left: 20%;
+  margin-bottom: 1.5%;
+}
+.buy:hover {
+  background-color: #3773af;
+}
+
+.buy:active {
+  background-color: #0c2f7d;
+}
+
+.cart {
+  background-color: rgb(178, 178, 11);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 1em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 3%;
+  width: 14em;
+  margin-left: 2%;
+}
+.star-rating {
+  font-size: 1.5em;
+  margin-top: 0.3em;
+  margin-left: 10em;
+  color: #FFD700; 
+}
+
+.star {
+  color: #ccc; 
+  margin-right: 2px;
+}
+
+.star.filled {
+  color: #FFD700; 
+}
+
+#rating{
+  font-size: 0.6em;
 }
