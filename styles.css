@@ -485,63 +485,97 @@ img {
 }
 
 /*For Community Tab*/
-.User-reviews{
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 2em 10%;
+}
+
+.user-review {
+  background: #1f3a5f;
   color: white;
-}
-
-.comment-input{
-  width: 55rem;
-}
-
-#comment-btn{
-  background-color: #2262bc;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 1em;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 0.75%;
-  width: 8em;
-  margin-left: 0%;
-}
-
-#comment-btn:hover {
-  background-color: #3773af;
-}
-
-#comment-btn:active {
-  background-color: #0c2f7d;
-}
-
-.user-info img {
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;            
-  border: 3px solid #ffffff;      
-  box-shadow: 0 0 0 3px #1f3a5f;  
+  border-radius: 1.5em;
+  padding: 1.5em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 .user-info {
   display: flex;
-  align-items: center;   
-  gap: 12px;             
-  margin-bottom: 1em;
-  margin-top: 0;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.user-info img {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 0 0 3px #1f3a5f;
 }
 
 .username {
   font-weight: bold;
-  font-size: 1.1em;
-  color: white;           
-  margin: 0;             
+  font-size: 1.2em;
+  margin-bottom: 0.3em;
+  display: block;
 }
 
-.review-text{
+.review-text {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.comment-box {
   display: flex;
-  margin-top: 6em;
-  margin-left: -5em;
+  gap: 1em;
+  margin-top: 1.5em;
+  flex-wrap: wrap;
+}
+
+.comment-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px;
+  border-radius: 0.8em;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.comment-btn {
+  background-color: #2262bc;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 0.8em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-btn:hover {
+  background-color: #3773af;
+}
+
+.comment-btn:active {
+  background-color: #0c2f7d;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .comment-box {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .comment-input,
+  .comment-btn {
+    width: 100%;
+  }
+
+  .reviews-container {
+    padding: 1em 5%;
+  }
 }
 
 /* For Sign In Form */
