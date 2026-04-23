@@ -6,10 +6,37 @@ import Footer from "../components/Footer";
 
 export default function Consultation() {
   const [showModal, setShowModal] = useState(false);
+  const [toast, setToast] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setShowModal(false);
+    setToast(true);
+
+    setTimeout(() => {
+      setToast(false);
+    }, 4000);
+  };
 
   return (
     <>
       <Navbar />
+
+      {/* TOAST */}
+      {toast && (
+        <div className="success-toast">
+          ✓ Appointment request submitted successfully
+        </div>
+      )}
 
       {/* HERO */}
       <section className="service-hero">
@@ -24,7 +51,7 @@ export default function Consultation() {
           </p>
 
           <div className="consult-buttons">
-            <button onClick={() => setShowModal(true)}>
+            <button onClick={openModal}>
               Book Appointment
             </button>
 
@@ -58,13 +85,17 @@ export default function Consultation() {
           <div className="process-card">
             <div className="step-no">02</div>
             <h3>Consult Online</h3>
-            <p>Talk to experienced eye doctors through video consultation.</p>
+            <p>
+              Talk to experienced eye doctors through video consultation.
+            </p>
           </div>
 
           <div className="process-card">
             <div className="step-no">03</div>
             <h3>Get Guidance</h3>
-            <p>Receive treatment advice, prescriptions and follow-ups.</p>
+            <p>
+              Receive treatment advice, prescriptions and follow-ups.
+            </p>
           </div>
         </div>
       </section>
@@ -147,7 +178,7 @@ export default function Consultation() {
       {showModal && (
         <div
           className="modal-overlay"
-          onClick={() => setShowModal(false)}
+          onClick={closeModal}
         >
           <div
             className="consult-modal"
@@ -155,25 +186,45 @@ export default function Consultation() {
           >
             <button
               className="modal-close"
-              onClick={() => setShowModal(false)}
+              onClick={closeModal}
             >
               ×
             </button>
 
             <h2>Book Consultation</h2>
 
-            <p>Fill your details and our team will contact you soon.</p>
+            <p>
+              Fill your details and our team will contact you soon.
+            </p>
 
-            <form className="consult-form">
-              <input type="text" placeholder="Full Name" />
-              <input type="text" placeholder="Phone Number" />
-              <input type="email" placeholder="Email Address" />
+            <form
+              className="consult-form"
+              onSubmit={handleSubmit}
+            >
+              <input
+                type="text"
+                placeholder="Full Name"
+              />
+
+              <input
+                type="text"
+                placeholder="Phone Number"
+              />
+
+              <input
+                type="email"
+                placeholder="Email Address"
+              />
+
               <textarea
                 rows="4"
                 placeholder="Describe your concern"
               ></textarea>
 
-              <button type="submit" className="submit-btn">
+              <button
+                type="submit"
+                className="submit-btn"
+              >
                 Submit Request
               </button>
             </form>
