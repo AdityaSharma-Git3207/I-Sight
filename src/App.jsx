@@ -8,6 +8,9 @@ import {
   FileText,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import Navbar from "./components/navbar";
+import Footer from "./components/Footer";
 import heroImg from "./assets/hero.png";
 import "./index.css";
 
@@ -48,20 +51,8 @@ export default function App() {
   return (
     <div className="app">
       {/* NAVBAR */}
-      <nav className="nav">
-        <h2>I - Sight</h2>
-
-        <div className="nav-links">
-          <a href="#">Home</a>
-          <a href="#">Services</a>
-          <a href="#">Accessibility</a>
-          <a href="#">Community</a>
-          <a href="#">Contact</a>
-        </div>
-
-        <button className="nav-btn">Get Started</button>
-      </nav>
-
+        <Navbar />
+        
       {/* HERO */}
       <section className="hero">
         <div className="hero-left">
@@ -190,10 +181,7 @@ export default function App() {
       </section>
 
       {/* FOOTER */}
-      <footer>
-        <h3>I - Sight</h3>
-        <p>Vision care, unified.</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
