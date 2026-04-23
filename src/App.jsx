@@ -84,11 +84,13 @@ export default function App() {
           </motion.p>
 
           <div className="hero-btns">
-            <button className="primary">
+            <Link to="/store" className="primary">
               Explore Platform <ArrowRight size={18} />
-            </button>
+            </Link>
 
-            <button className="secondary">Book Consult</button>
+            <Link to="/consultation" className="secondary">
+              Book Consult
+            </Link>
           </div>
 
           <div className="hero-stats">
