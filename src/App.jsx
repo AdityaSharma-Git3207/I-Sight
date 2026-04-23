@@ -27,7 +27,7 @@ const features = [
   },
   {
     icon: <HeartPulse size={28} />,
-    title: "Prescription Care",
+    title: "Prescription Solution",
     desc: "Upload prescriptions and manage orders with ease.",
   },
   {
@@ -148,10 +148,10 @@ export default function App() {
             <p>Everything connected for better vision care.</p>
           </div>
 
-          <div className="float-card card1"> Doctor Consult</div>
-          <div className="float-card card2"> Eye Health Records</div>
+          <div className="float-card card1"> Doctor's Consultation</div>
+          <div className="float-card card2"> Eye Care Records</div>
           <div className="float-card card3"> Trusted Eyewear</div>
-          <div className="float-card card4"> NGO Support</div>
+          <div className="float-card card4"> NGO Access</div>
           <div className="float-card card5"> Awareness </div>
         </div>
       </section>

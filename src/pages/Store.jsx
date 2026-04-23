@@ -53,7 +53,7 @@ export default function Store() {
         <div className="store-left">
           <span className="page-tag">EYEWEAR STORE</span>
 
-          <h1>Premium Eyewear, Better Vision.</h1>
+          <h1>Premium Eyewear, Clear Vision.</h1>
 
           <p>
             Discover stylish frames, quality lenses and essential eye-care

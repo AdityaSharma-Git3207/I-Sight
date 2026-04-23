@@ -11,8 +11,7 @@ export default function Footer() {
           <h2>I - Sight</h2>
 
           <p>
-            Premium eyewear and eye care essentials designed for
-            clarity, comfort and confidence.
+            Complete eye care ecosystem for consultations, awareness, eyewear and better vision support.
           </p>
         </div>
 
