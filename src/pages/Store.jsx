@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/navbar";
 import Footer from "../components/Footer";
@@ -12,9 +13,40 @@ import sunglassesImg from "../assets/sunglasses.png";
 import accessoriesImg from "../assets/accessories.png";
 
 export default function Store() {
+  const [showModal, setShowModal] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState("");
+  const [toast, setToast] = useState(false);
+
+  const openEnquiry = (product) => {
+    setSelectedProduct(product);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setShowModal(false);
+    setToast(true);
+
+    setTimeout(() => {
+      setToast(false);
+    }, 4000);
+  };
+
   return (
     <>
       <Navbar />
+
+      {/* TOAST */}
+      {toast && (
+        <div className="success-toast">
+          ✓ Enquiry submitted successfully
+        </div>
+      )}
 
       {/* HERO */}
       <section className="store-hero">
@@ -29,7 +61,10 @@ export default function Store() {
           </p>
 
           <div className="store-buttons">
-            <button>Shop Now</button>
+            <button onClick={() => openEnquiry("General Store Products")}>
+              Shop Now
+            </button>
+
             <Link to="/">Back Home</Link>
           </div>
         </div>
@@ -54,42 +89,54 @@ export default function Store() {
             <img src={glassesImg} alt="Eyeglasses" />
             <h3>Eyeglasses</h3>
             <p>Stylish frames for work, study and everyday wear.</p>
-            <button>Shop Now</button>
+            <button onClick={() => openEnquiry("Eyeglasses")}>
+              Shop Now
+            </button>
           </div>
 
           <div className="store-card">
             <img src={lensesImg} alt="Contact Lenses" />
             <h3>Contact Lenses</h3>
             <p>Comfortable lenses for clear, natural vision.</p>
-            <button>Shop Now</button>
+            <button onClick={() => openEnquiry("Contact Lenses")}>
+              Shop Now
+            </button>
           </div>
 
           <div className="store-card">
             <img src={eyedropsImg} alt="Eye Drops" />
             <h3>Eye Drops</h3>
             <p>Relief for dryness, strain and irritation.</p>
-            <button>Shop Now</button>
+            <button onClick={() => openEnquiry("Eye Drops")}>
+              Shop Now
+            </button>
           </div>
 
           <div className="store-card">
             <img src={cleanerImg} alt="Lens Care" />
             <h3>Lens Care</h3>
             <p>Cleaners, wipes and sprays for crystal clarity.</p>
-            <button>Shop Now</button>
+            <button onClick={() => openEnquiry("Lens Care")}>
+              Shop Now
+            </button>
           </div>
 
           <div className="store-card">
             <img src={sunglassesImg} alt="Sunglasses" />
             <h3>Sunglasses</h3>
             <p>UV protection with premium style.</p>
-            <button>Shop Now</button>
+            <button onClick={() => openEnquiry("Sunglasses")}>
+              Shop Now
+            </button>
           </div>
 
           <div className="store-card">
             <img src={accessoriesImg} alt="Accessories" />
             <h3>Accessories</h3>
             <p>Cases, chains, kits and essentials.</p>
-            <button>Shop Now</button>
+            <button onClick={() => openEnquiry("Accessories")}>
+              Shop Now
+            </button>
           </div>
         </div>
       </section>
@@ -106,8 +153,16 @@ export default function Store() {
         </p>
 
         <div className="store-cta-buttons">
-          <button>Consult Expert</button>
-          <button className="secondary-btn">Shop All Products</button>
+          <button onClick={() => openEnquiry("Expert Product Guidance")}>
+            Consult Expert
+          </button>
+
+          <button
+            className="secondary-btn"
+            onClick={() => openEnquiry("Full Product Range")}
+          >
+            Shop All Products
+          </button>
         </div>
       </section>
 
@@ -115,6 +170,63 @@ export default function Store() {
       <div className="store-footer-wrap">
         <Footer />
       </div>
+
+      {/* MODAL */}
+      {showModal && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div
+            className="consult-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className="modal-close" onClick={closeModal}>
+              ×
+            </button>
+
+            <h2>Product Enquiry</h2>
+
+            <p>
+              Interested in: <strong>{selectedProduct}</strong>
+            </p>
+
+            <form
+              className="consult-form"
+              onSubmit={handleSubmit}
+            >
+              <input
+                type="text"
+                placeholder="Full Name"
+              />
+
+              <input
+                type="text"
+                placeholder="Phone Number"
+              />
+
+              <input
+                type="email"
+                placeholder="Email Address"
+              />
+
+              <textarea
+                rows="4"
+                placeholder="Your requirement / power / quantity"
+              ></textarea>
+
+              <p className="launch-note">
+                Full inventory browsing and secure checkout
+                launching soon.
+              </p>
+
+              <button
+                type="submit"
+                className="submit-btn"
+              >
+                Submit Enquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </>
   );
 }

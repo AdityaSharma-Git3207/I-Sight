@@ -1256,6 +1256,67 @@ img{
 
 }
 
+
+/* =========================
+   SUCCESS TOAST
+========================= */
+
+.success-toast{
+  position: fixed;
+  top: 96px;
+  right: 24px;
+  z-index: 9999;
+
+  background: #16a34a;
+  color: #ffffff;
+
+  padding: 14px 18px;
+  border-radius: 14px;
+
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .2px;
+
+  box-shadow: 0 18px 40px rgba(22,163,74,.22);
+
+  animation: toastSlide .35s ease;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes toastSlide{
+  from{
+    opacity: 0;
+    transform: translateX(28px);
+  }
+
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.success-toast{
+  top: 82px;
+  right: 14px;
+  left: 14px;
+
+  text-align: center;
+  font-size: 14px;
+  padding: 13px 14px;
+}
+
+}
+
+
 /* =========================
    AWARENESS HERO
 ========================= */
