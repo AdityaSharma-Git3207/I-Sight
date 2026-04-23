@@ -1522,6 +1522,16 @@ img{
   margin: 0 auto 38px;
 }
 
+.aware-buttons .primary-btn{
+  background: #3b82f6;
+  color: #ffffff;
+  border: none;
+}
+
+.aware-buttons .primary-btn:hover{
+  background: #2563eb;
+}
+
 /* =========================
    MOBILE
 ========================= */

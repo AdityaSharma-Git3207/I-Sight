@@ -26,8 +26,16 @@ export default function Awareness() {
         </p>
 
         <div className="aware-buttons">
-          <button>Book Consultation</button>
-          <Link to="/store">Explore Store</Link>
+          <Link
+            to="/consultation"
+            className="primary-btn"
+          >
+            Book Consultation
+          </Link>
+
+          <Link to="/store">
+            Explore Store
+          </Link>
         </div>
       </section>
 
@@ -87,8 +95,16 @@ export default function Awareness() {
         </p>
 
         <div className="aware-buttons">
-          <button>Consult Expert</button>
-          <Link to="/store">Shop Essentials</Link>
+          <Link
+            to="/consultation"
+            className="primary-btn"
+          >
+            Consult Expert
+          </Link>
+
+          <Link to="/store">
+            Shop Essentials
+          </Link>
         </div>
       </section>
 
