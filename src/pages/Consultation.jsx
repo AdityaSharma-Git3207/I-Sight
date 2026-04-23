@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import doctorImg from "../assets/doctor-consult.png";
 import Navbar from "../components/navbar";
 import Footer from "../components/Footer";
 
 export default function Consultation() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <>
       <Navbar />
@@ -21,7 +24,10 @@ export default function Consultation() {
           </p>
 
           <div className="consult-buttons">
-            <button>Book Appointment</button>
+            <button onClick={() => setShowModal(true)}>
+              Book Appointment
+            </button>
+
             <Link to="/">Back Home</Link>
           </div>
         </div>
@@ -52,17 +58,13 @@ export default function Consultation() {
           <div className="process-card">
             <div className="step-no">02</div>
             <h3>Consult Online</h3>
-            <p>
-              Talk to experienced eye doctors through video consultation.
-            </p>
+            <p>Talk to experienced eye doctors through video consultation.</p>
           </div>
 
           <div className="process-card">
             <div className="step-no">03</div>
             <h3>Get Guidance</h3>
-            <p>
-              Receive treatment advice, prescriptions and follow-ups.
-            </p>
+            <p>Receive treatment advice, prescriptions and follow-ups.</p>
           </div>
         </div>
       </section>
@@ -140,6 +142,44 @@ export default function Consultation() {
       </section>
 
       <Footer />
+
+      {/* MODAL */}
+      {showModal && (
+        <div
+          className="modal-overlay"
+          onClick={() => setShowModal(false)}
+        >
+          <div
+            className="consult-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="modal-close"
+              onClick={() => setShowModal(false)}
+            >
+              ×
+            </button>
+
+            <h2>Book Consultation</h2>
+
+            <p>Fill your details and our team will contact you soon.</p>
+
+            <form className="consult-form">
+              <input type="text" placeholder="Full Name" />
+              <input type="text" placeholder="Phone Number" />
+              <input type="email" placeholder="Email Address" />
+              <textarea
+                rows="4"
+                placeholder="Describe your concern"
+              ></textarea>
+
+              <button type="submit" className="submit-btn">
+                Submit Request
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </>
   );
 }
