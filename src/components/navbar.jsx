@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -6,13 +6,25 @@ export default function Navbar() {
       <h2>I - Sight</h2>
 
       <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/consultation">Consultation</Link>
-        <Link to="/store">Store</Link>
-        <Link to="/awareness">Awareness</Link>
+        <NavLink to="/">Home</NavLink>
+
+        <NavLink to="/consultation">
+          Consultation
+        </NavLink>
+
+        <NavLink to="/store">
+          Store
+        </NavLink>
+
+        <NavLink to="/awareness">
+          Awareness
+        </NavLink>
       </div>
 
-      <Link to="/consultation" className="nav-btn">
+      <Link
+        to="/consultation"
+        className="nav-btn"
+      >
         Get Started
       </Link>
     </nav>
